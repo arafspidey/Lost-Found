@@ -4,7 +4,8 @@
   "description": "Lost & Found Registry (CSE 3200 project)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test"
   },
   "engines": {
     "node": ">=22.13"
