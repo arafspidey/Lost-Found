@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse found items - Lost &amp; Found</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>Lost something? See what has been found.</h1>
+      <p>Search by what it is and the place where you lost it. To claim an item, you answer a question in your own words. The finder reads your answer and decides. Contact details are shared only after the finder approves.</p>
+    </section>
+
+    <form id="searchForm" class="search">
+      <label class="wide">Keywords
+        <input type="search" name="q" placeholder="For example: black samsung">
+      </label>
+      <label>Category
+        <select name="category"><option value="">Any category</option></select>
+      </label>
+      <label>District
+        <select name="district"></select>
+      </label>
+      <label>Upazila
+        <select name="upazila"></select>
+      </label>
+      <label>Village / mohalla
+        <select name="area"></select>
+      </label>
+      <button class="btn search-button" type="submit">Search</button>
+    </form>
+
+    <p id="resultCount" class="muted" role="status"></p>
+    <div id="results" class="grid"></div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script src="/home.js"></script>
+</body>
+</html>

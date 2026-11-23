@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post a found item - Lost &amp; Found</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main class="wrap">
+    <h1>Post a found item</h1>
+    <p class="muted form-medium">Describe the item in general terms. Keep some details back for the verification question below. People who claim the item will answer it in their own words, and you decide whether the answer is right.</p>
+
+    <form id="postForm" class="panel form-medium">
+      <label>Photo (optional)
+        <input type="file" name="photo" accept="image/jpeg,image/png,image/webp">
+        <span class="hint">JPG, PNG or WebP, up to 3 MB. Do not show serial numbers, ID numbers or other private details.</span>
+      </label>
+      <label>Category
+        <select name="category" required><option value="">Choose a category</option></select>
+      </label>
+      <label>District where you found it
+        <select id="district" required></select>
+      </label>
+      <label>Upazila
+        <select id="upazila" required></select>
+      </label>
+      <label>Village / mohalla
+        <select name="area_id" id="area" required></select>
+      </label>
+      <label>Description
+        <textarea name="description" minlength="10" maxlength="1000" required placeholder="Black phone with a cracked screen, found near the bus stand."></textarea>
+      </label>
+      <label>Verification question
+        <input type="text" name="secret_question" minlength="5" maxlength="200" required placeholder="Which cards are inside the wallet?">
+        <span class="hint">Pick something only the owner would know. It is shown to people who want to claim the item.</span>
+      </label>
+      <label>What you can see on the item (optional)
+        <textarea name="secret_answer" maxlength="300" placeholder="Wallpaper is a snowy mountain. Cards: Dutch Bangla and a student ID."></textarea>
+        <span class="hint">Notes for yourself, to compare with the claimant's answer. Only you can see this.</span>
+      </label>
+      <div id="message"></div>
+      <button class="btn" type="submit">Post item</button>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script src="/post.js"></script>
+</body>
+</html>

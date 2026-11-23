@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Lost &amp; Found</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main class="wrap">
+    <h1>Create an account</h1>
+    <form id="registerForm" class="panel form-narrow">
+      <label>Full name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>NID number
+        <input type="text" name="nid" inputmode="numeric" placeholder="10, 13 or 17 digits" required>
+        <span class="hint">Used to hold people accountable if they post fake items or miss a handover. Only admins can see it.</span>
+      </label>
+      <label>Phone number
+        <input type="tel" name="phone" placeholder="01XXXXXXXXX" autocomplete="username" required>
+        <span class="hint">Shared with the other person only after a claim is approved.</span>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="new-password" minlength="6" required>
+        <span class="hint">At least 6 characters.</span>
+      </label>
+      <div id="message"></div>
+      <button class="btn" type="submit">Register</button>
+      <p class="muted small form-note">Already registered? <a href="/login.html">Log in</a></p>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script src="/register.js"></script>
+</body>
+</html>

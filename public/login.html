@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in - Lost &amp; Found</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main class="wrap">
+    <h1>Log in</h1>
+    <form id="loginForm" class="panel form-narrow">
+      <label>Phone number
+        <input type="tel" name="phone" placeholder="01XXXXXXXXX" autocomplete="username" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <div id="message"></div>
+      <button class="btn" type="submit">Log in</button>
+      <p class="muted small form-note">No account yet? <a href="/register.html">Register</a></p>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script src="/login.js"></script>
+</body>
+</html>
